@@ -941,6 +941,97 @@ input[type='range']::-moz-range-track {
 	font-weight: 600;
 	font-size: 10px;
 }
+.order__container {
+	background-color: white;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+}
+.order__button {
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: white;
+	border: 1px solid var(--bs-primary);
+	border-radius: 20px;
+	color: var(--bs-primary);
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.order__button:active {
+	background-color: var(--bs-primary);
+	color: white;
+}
+.order__button:hover {
+	background-color: var(--bs-primary);
+	color: white;
+}
+.order__info {
+	font-size: 12px;
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+}
+.order__info-star {
+	font-size: 12px;
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	color: #dc1c1c;
+}
+.order__input {
+	border: 0.5px solid #dcdcdc;
+	background-color: #e9e9e9;
+	border-radius: 3px;
+}
+/* Стилизация кастомных radio */
+.custom-radio input {
+	display: none; /* Скрываем стандартный radio */
+}
+
+.custom-radio label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.custom-radio label::before {
+	content: '';
+	width: 16px;
+	height: 16px;
+	background-color: #e9e9e9;
+	border: 0;
+	border-radius: 50%;
+	display: inline-block;
+	transition: 0.2s;
+}
+.custom-radio input:checked + label::before {
+	border: none;
+	background-color: #e9e9e9;
+	background-image: radial-gradient(circle, #9e8267 30%, transparent 40%);
+}
+.radio__label {
+	font-family: 'Jost', sans-serif;
+	font-size: 16px;
+}
+.order__create {
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 22px;
+	padding-right: 22px;
+	background-color: var(--bs-primary);
+	color: white;
+	border: 0;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.col-3-5 {
+	flex: 1;
+	max-width: 32%; /* Среднее между col-3 (25%) и col-4 (33.33%) */
+}
 .ms-4-5 {
 	margin-left: 2.2rem;
 }
@@ -976,7 +1067,7 @@ input[type='range']::-moz-range-track {
 	font-size: 0.875rem !important; /* 14px */
 }
 .fs-8-5 {
-	font-size: 0.8125rem !important;
+	font-size: 0.8125rem !important; /* 13px */
 }
 .fs-9 {
 	font-size: 0.75rem !important; /* 12px */
