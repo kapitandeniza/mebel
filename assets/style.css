@@ -1028,9 +1028,113 @@ input[type='range']::-moz-range-track {
 	font-weight: 600;
 	text-transform: uppercase;
 }
+.info__buyers {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+.offer__container {
+	background-color: white;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+}
+.offer__wrapper {
+	padding-top: 30px;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-bottom: 32px;
+}
+.offer__input {
+	border: 0.5px solid #dcdcdc;
+	background-color: #e9e9e9;
+	border-radius: 3px;
+}
+.offer__label {
+	font-size: 12px;
+	font-weight: 300;
+}
+.offer__label span {
+	color: #dc1c1c;
+}
+.offer__toggle {
+	position: relative;
+	width: 36px;
+	height: 16px;
+}
+/* Скрытый чекбокс */
+.offer__toggle-input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* Стилизация фона переключателя */
+.offer__toggle-label {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	transition: background 0.3s ease;
+}
+
+/* Стилизация круглого элемента (ползунка) */
+.offer__toggle-slider {
+	position: absolute;
+	right: 6px;
+	left: 2px;
+	top: 1px;
+	width: 14px;
+	height: 14px;
+	background: white;
+	border-radius: 50%;
+	transition: transform 0.3s ease;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* При включенном состоянии */
+.offer__toggle-input:checked + .offer__toggle-label {
+	background: #9e8267;
+}
+
+.offer__toggle-input:checked + .offer__toggle-label .offer__toggle-slider {
+	transform: translateX(18px);
+}
+.offer__submit {
+	border: 0;
+	background-color: var(--bs-primary);
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 33px;
+	padding-right: 33px;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 12px;
+}
+.info__wrapper {
+	margin-bottom: 275px;
+	margin-top: 24px;
+}
 .col-3-5 {
 	flex: 1;
 	max-width: 32%; /* Среднее между col-3 (25%) и col-4 (33.33%) */
+}
+.col-6-5 {
+	flex: 0 0 auto;
+	width: 54.16666667%; /* 6.5/12 * 100% */
+}
+.col-6-3 {
+	flex: 0 0 auto;
+	width: 52%;
+}
+.col-5-3 {
+	flex: 0 0 auto;
+	width: 48%;
 }
 .ms-4-5 {
 	margin-left: 2.2rem;
