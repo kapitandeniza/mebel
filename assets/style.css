@@ -1120,6 +1120,55 @@ input[type='range']::-moz-range-track {
 	margin-bottom: 275px;
 	margin-top: 24px;
 }
+.errorPage__button {
+	background-color: var(--bs-primary);
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 44px;
+	padding-right: 44px;
+	border-radius: 20px;
+	border: 0;
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Jost', sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+}
+.errorPage__text {
+	text-align: center;
+	font-size: 20px;
+	line-height: 35px;
+	color: #181818;
+}
+.errorPage__text a {
+	text-align: center;
+	color: #181818;
+}
+.errorPage__wrapper {
+	margin-top: 104px;
+	margin-bottom: 224px;
+}
+.project__info {
+	line-height: 35px;
+	font-size: 14px;
+	color: #181818;
+}
+.project__wrapper {
+	margin-bottom: 215px;
+}
+.order__link {
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--bs-primary);
+	text-decoration: none;
+}
+.order__link:hover {
+	color: white;
+}
+.order__link:active {
+	color: white;
+}
 .col-3-5 {
 	flex: 1;
 	max-width: 32%; /* Среднее между col-3 (25%) и col-4 (33.33%) */
@@ -1138,6 +1187,9 @@ input[type='range']::-moz-range-track {
 }
 .ms-4-5 {
 	margin-left: 2.2rem;
+}
+.fs-0-1 {
+	font-size: 8rem; /* 128px */
 }
 .fs-0 {
 	font-size: 6rem; /* 96px */

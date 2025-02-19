@@ -1,4 +1,5 @@
 <?php require('../template-parts/header.php'); ?>
+<?php $type = $_GET['type'] ?? 'individual'; ?>
 <div class='container mb-2 mt-4 ps-0 pe-0'>
 	<div class="d-flex align-items-center gap-2">
 		<span class='text-primary fs-10 fw-bolder'>Главная</span>
@@ -14,37 +15,94 @@
 		<div class='order__container ps-0 pe-0 col-8'>
 			<div class='ms-4 me-4'>
 				<div class='ps-0 pe-0 d-flex mt-3 gap-2'>
-					<button class='order__button'>Физическое&nbsp;лицо</button>
-					<button class='order__button'>Юридическое&nbsp;лицо</button>
+					<button class='order__button'>
+						<a href='?type=individual'
+							class='<?= $type == 'individual' ? 'active' : ''; ?> order__link'>Физическое&nbsp;лицо</a>
+					</button>
+					<button class='order__button'>
+						<a href='?type=company'
+							class='<?= $type == 'company' ? 'active' : ''; ?> order__link'>Юридическое&nbsp;лицо</a>
+					</button>
 				</div>
 				<div class='mt-3 mb-3 ps-0 pe-0'>
 					<h2 class='fs-5-5 fw-bolder'>Информация&nbsp;о&nbsp;покупателе</h2>
 				</div>
-				<div class='d-flex justify-content-between gap-2'>
-					<div class='d-flex flex-column gap-1'>
-						<label class='order__info'>Имя<span class='order__info-star'>*</span>
-						</label>
-						<input class='order__input' />
+				<?php if ($type == 'individual'): ?>
+					<div class='d-flex justify-content-between gap-2'>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Имя<span class='order__info-star'>*</span>
+							</label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Фамилия<span class='order__info-star'>*</span></label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Отчество</label>
+							<input class='order__input' />
+						</div>
 					</div>
-					<div class='d-flex flex-column gap-1'>
-						<label class='order__info'>Фамилия<span class='order__info-star'>*</span></label>
-						<input class='order__input' />
+				<?php else: ?>
+					<div class='d-flex justify-content-between gap-2'>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>ИНН<span class='order__info-star'>*</span>
+							</label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Название компании<span class='order__info-star'>*</span></label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Юридический адрес</label>
+							<input class='order__input' />
+						</div>
 					</div>
-					<div class='d-flex flex-column gap-1'>
-						<label class='order__info'>Отчество</label>
-						<input class='order__input' />
+				<?php endif; ?>
+				<?php if ($type == 'individual'): ?>
+					<div class='d-flex gap-3 mt-2'>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Телефон<span class='order__info-star'>*</span></label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1 ms-1'>
+							<label class='order__info'>Email</label>
+							<input class='order__input' />
+						</div>
 					</div>
-				</div>
-				<div class='d-flex gap-3 mt-2'>
-					<div class='d-flex flex-column gap-1'>
-						<label class='order__info'>Телефон<span class='order__info-star'>*</span></label>
-						<input class='order__input' />
+				<?php else: ?>
+					<div class='d-flex justify-content-between gap-2 mt-2'>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>КПП</label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Имя<span class='order__info-star'>*</span></label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Отчество</label>
+							<input class='order__input' />
+						</div>
 					</div>
-					<div class='d-flex flex-column gap-1 ms-1'>
-						<label class='order__info'>Email</label>
-						<input class='order__input' />
+				<?php endif; ?>
+				<?php if ($type == 'company'): ?>
+					<div class='d-flex justify-content-between gap-2 mt-2'>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Фамилия</label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Телефон<span class='order__info-star'>*</span></label>
+							<input class='order__input' />
+						</div>
+						<div class='d-flex flex-column gap-1'>
+							<label class='order__info'>Email<span class='order__info-star'>*</span></label>
+							<input class='order__input' />
+						</div>
 					</div>
-				</div>
+				<?php endif; ?>
 				<div class='d-flex flex-column mt-2 gap-1'>
 					<label class='order__info'>Комментарий к заказу</label>
 					<textarea class='order__input' name="Комментарий к заказу" id=""></textarea>
