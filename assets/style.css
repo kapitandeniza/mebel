@@ -946,6 +946,13 @@ input[type='range']::-moz-range-track {
 	border: 1px solid #eeeeee;
 	border-radius: 5px;
 }
+.order__container-confirm {
+	background-color: white;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+	padding-bottom: 40px;
+	height: 25%;
+}
 .order__button {
 	padding-top: 11px;
 	padding-bottom: 11px;
@@ -1168,6 +1175,27 @@ input[type='range']::-moz-range-track {
 }
 .order__link:active {
 	color: white;
+}
+.radio__link {
+	text-decoration: none;
+	color: #26292b;
+}
+.payment__account-text {
+	font-family: 'Jost', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #26292b;
+}
+.payment__address-text {
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	color: #000000;
+}
+.popup__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .col-3-5 {
 	flex: 1;
