@@ -1197,6 +1197,87 @@ input[type='range']::-moz-range-track {
 	align-items: center;
 	justify-content: center;
 }
+.orderCall-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000; /* Убедитесь, что попап поверх других элементов */
+}
+.orderCall-popup__content {
+	background-color: white;
+	border-radius: 5px;
+	padding-top: 30px;
+	padding-bottom: 33px;
+	padding-left: 33px;
+	padding-right: 33px;
+	max-width: 254px;
+}
+.orderCall-popup__title {
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--bs-primary);
+}
+.orderCall-popup__label {
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	color: #000000;
+	margin-bottom: 5px;
+}
+.orderCall-popup__input {
+	border-radius: 3px;
+	color: #000000;
+	background-color: #e9e9e9;
+	border: 0.5px solid #dcdcdc;
+}
+.orderCall-popup__agreement {
+	display: flex;
+	gap: 15px;
+	margin-top: 17px;
+}
+.orderCall-popup__agreement-paragraph {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 10px;
+	margin-bottom: 5px;
+}
+.orderCall-popup__agreement-highlight {
+	color: var(--bs-primary);
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 10px;
+}
+.orderCall-popup__actions {
+	display: flex;
+	justify-content: center;
+}
+.orderCall-popup__button {
+	border: 0;
+	background-color: var(--bs-primary);
+	color: white;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 36px;
+	padding-right: 36px;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.orderCall-popup__required {
+	color: #dc1c1c;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
 .col-3-5 {
 	flex: 1;
 	max-width: 32%; /* Среднее между col-3 (25%) и col-4 (33.33%) */

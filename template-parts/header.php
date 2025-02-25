@@ -52,7 +52,20 @@
 							<div class="text-muted fs-8">Корзина(<span class="text-primary">16</span>)</div>
 						</div>
 						<div class="d-flex justify-content-center mt-3">
-							<a class="text-primary text-uppercase fs-10">заказать звонок</a>
+							<a id="openPopup" class="cursor-pointer text-primary text-uppercase fs-10">заказать звонок</a>
+							<?php require("../pages/orderCallWindow.php") ?>
+							<script>
+								const openPopupButton = document.getElementById("openPopup")
+								const popup = document.getElementById("popup")
+								openPopupButton.addEventListener("click", () => {
+									popup.style.display = "flex"
+								})
+								popup.addEventListener("click", (event) => {
+									if (event.target === popup) {
+										popup.style.display = "none"
+									}
+								})
+							</script>
 						</div>
 					</div>
 				</div>
