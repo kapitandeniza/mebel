@@ -74,10 +74,20 @@
 		<div class="bg-primary">
 			<nav class="container d-flex align-items-center">
 				<ul class="list-inline text-uppercase fw-bold fs-9 mb-0">
-					<li class="list-inline-item">
+					<li id="catalog" class="list-inline-item">
 						<a href="#" class="text-white me-3 text-decoration-none">Каталог<img class='ms-1'
 								src='/images/chevron_catalog.svg' /></a>
 					</li>
+					<?php require("../pages/catalogWindow.php") ?>
+					<script>
+						document.getElementById("catalog").addEventListener("mouseenter", () => {
+							document.getElementById("catalogMegaMenu").style.display = "flex"
+						})
+						document.querySelector(".catalog").addEventListener("mouseleave", () => {
+							document.getElementById("catalogMegaMenu").style.display = "none"
+						})
+					</script>
+
 					<li class="list-inline-item">
 						<a href="#" class="text-white me-3 text-decoration-none">О Нас</a>
 					</li>
